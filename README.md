@@ -1,24 +1,38 @@
-# README
+# Allergen Lab: 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+User  -<  Recipe -<  RecipeIngredient  >- Ingredient   
+User -< Allergy >- Ingredient 
 
-Things you may want to cover:
+## User 
+- first_name 
+- last_name 
 
-* Ruby version
+## Recipe 
+- title 
+- user_id 
 
-* System dependencies
+## RecipeIngredient 
+- recipe_id 
+- ingredient_id 
 
-* Configuration
+## Ingredient 
+- name  
 
-* Database creation
+## Allergy 
+- user_id
+- ingredient_id 
 
-* Database initialization
+## Workflow reminder
+- Rails new 
+- Rails g model user first_name last_name 
+- Migrate 
+- Seed database
+- Test in rails console
+- Edit models, aka add associations and validations
+- Test again in rails console 
+- Edit routes.rb with necessary routes
+- Rails g controller user index new create 
+- Edit controller actions 
+- Check your views 
+- Repeat above for other models 
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
