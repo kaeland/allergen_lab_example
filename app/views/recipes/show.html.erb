@@ -1,0 +1,13 @@
+<h1><%= @recipe.title %></h1>
+<% if @recipe.ingredients.any? %>
+<p>Ingredients:</p>
+  <ul>
+    <% @recipe.ingredients.each do |ingredient| %>
+      <li><%= ingredient.name %></li>
+    <% end %>
+  </ul>
+  <% else %>
+  <p>This recipe has no ingredients!</p>
+<% end %>
+
+<%= link_to "Our recipes", recipes_path %>

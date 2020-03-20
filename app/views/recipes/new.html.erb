@@ -1,0 +1,17 @@
+<h1>Create a New Recipe</h1>
+
+<%= form_for(@recipe) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :user_id %>
+  <%= f.collection_select :user_id, User.all, :id, :full_name %>
+  <%= f.collection_select :ingredient_ids, Ingredient.all, :id, :name %>
+  <%= f.submit %>
+<% end %>
+
+<%# 
+  Using :ingredient_ids as the first argument to the collection_select above provides us a way 
+  to recieve the ID of the ingredient we would like to associate with our recipe. 
+  We must now permit :ingredient_ids in our "recipe_params" method (strong params)
+  inside the recipes_controller.rb file. PLEASE REVIEW THIS
+%>
